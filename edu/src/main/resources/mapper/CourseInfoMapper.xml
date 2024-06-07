@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.eduonline.backend.mapper.CourseInfoMapper">
+
+    <resultMap id="BaseResultMap" type="com.eduonline.backend.model.entity.CourseInfo">
+            <id property="id" column="id" jdbcType="VARCHAR"/>
+            <result property="courseId" column="course_id" jdbcType="VARCHAR"/>
+            <result property="videoLink" column="video_link" jdbcType="VARCHAR"/>
+            <result property="infoLink" column="info_link" jdbcType="VARCHAR"/>
+            <result property="isDelete" column="is_delete" jdbcType="TINYINT"/>
+            <result property="content" column="content" jdbcType="VARCHAR"/>
+            <result property="chapterNum" column="chapter_num" jdbcType="INTEGER"/>
+            <result property="intro" column="intro" jdbcType="VARCHAR"/>
+            <result property="title" column="title" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,course_id,video_link,
+        info_link,is_delete,content,
+        chapter_num,intro,title
+    </sql>
+</mapper>
